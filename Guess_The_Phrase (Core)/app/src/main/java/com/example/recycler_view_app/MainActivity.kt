@@ -25,43 +25,10 @@ class MainActivity : AppCompatActivity() {
     var answer="omaro"
     var Guessed_Letter=""
     var pharseStar=convertLiterToStar()
-    fun convertLiterToStar(): String {
-       var stars=""
-        //add stars
-        for (i in answer.indices){
-            stars+="*"
-        }
 
-        return stars
-    }
-    fun fundInText(litter:String){
-        var count=0
-        var found=false
-        for (i in answer.indices){
-            if (answer[i]==litter.single()){
-                count++
-                pharseStar = pharseStar.substring(0, i) + litter + pharseStar.substring(i + 1)
 
-                found=true
-            }
-        }
-
-        if(found==false){
-            message.add("No Found $litter")
-        }else{
-            Guessed_Letter+="$litter,"
-
-        }
-        textView.setText("Phrase : $pharseStar \n Guessed Letter $Guessed_Letter ")
-        message.add("Found $count $litter(s)")
-
-        if (pharseStar==answer) {
-            customAlert("You win!\n\nPlay again?")
-            clearEditTextAndAddHint("Guess full phrase")
-
-        }
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         editText=findViewById(R.id.etInputUser)
@@ -86,6 +53,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
     fun addMessage(){
         val guess = editText.text.toString()
         if(guess.isEmpty()){
@@ -101,7 +69,8 @@ class MainActivity : AppCompatActivity() {
                     message.add("wrong guess: $guess")
                     clearEditTextAndAddHint("enter litter")
 
-                }else{
+                }
+                else{
 
                     if(guess.isEmpty()) Snackbar.make(cLMain, "Please enter some text", Snackbar.LENGTH_LONG).show()
                     else{
@@ -138,6 +107,45 @@ class MainActivity : AppCompatActivity() {
         editText.text.clear()
         editText.clearFocus()
         etInputUser.setHint("$hint")
+    }
+
+    fun convertLiterToStar(): String {
+        var stars=""
+        //add stars
+        for (i in answer.indices){
+            stars+="*"
+        }
+
+        return stars
+    }
+
+    fun fundInText(litter:String){
+        var count=0
+        var found=false
+        for (i in answer.indices){
+            if (answer[i]==litter.single()){
+                count++
+                pharseStar = pharseStar.substring(0, i) + litter + pharseStar.substring(i + 1)
+
+                found=true
+            }
+        }
+
+        if(found==false){
+            message.add("No Found $litter")
+        }
+        else{
+            Guessed_Letter+="$litter "
+
+        }
+        textView.setText("Phrase : $pharseStar \n Guessed Letter $Guessed_Letter ")
+        message.add("Found $count $litter(s)")
+
+        if (pharseStar==answer) {
+            customAlert("You win!\n\nPlay again?")
+            clearEditTextAndAddHint("Guess full phrase")
+
+        }
     }
 
 }
