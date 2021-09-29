@@ -1,26 +1,23 @@
-package com.example.myapplication
+package com.example.task
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
-    lateinit var ed1:EditText
-    lateinit var ed2:EditText
     lateinit var button: Button
-
-
+    lateinit var name: TextView
+    lateinit var mobile: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        ed1=findViewById(R.id.ed1)
-        ed1=findViewById(R.id.ed2)
         button=findViewById(R.id.button)
-
+        name=findViewById(R.id.name)
+        mobile=findViewById(R.id.mobile)
         button.setOnClickListener {
-            Toast.makeText(applicationContext, "${ed1.text}  ${ed2.text}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "${name.text} ${mobile.text}", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5e3459b-ac9d-4d77-90c6-a24c7c82882b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/task/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/androidTest/java/com/example/task/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/java/com/example/task/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/app/src/test/java/com/example/task/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication6/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyApplication6/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyApplication6/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication6/app/src/main/java/com/example/myapplication/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/MyApplication6/app/src/main/java/com/example/myapplication/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication6/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyApplication6/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ynydtNmLwh3NbSzeRBHR71crNL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5e3459b-ac9d-4d77-90c6-a24c7c82882b" name="Default Changelist" comment="" />
+      <created>1632901736953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632901736953</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
