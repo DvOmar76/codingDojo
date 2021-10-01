@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
     var guesses=10
     var highScore=0
     var answer="omaro"
-    var Guessed_Letter=""
-    var pharseStar=convertLiterToStar()
+    var guessed_Letter=""
+    var phraseStar=convertLiterToStar()
     private var score=0
     private lateinit var HighscorView: TextView
 
@@ -38,20 +38,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        sharedPreferences = this.getSharedPreferences(
-            getString(R.string.preference_file_key), Context.MODE_PRIVATE)
-        highScore = sharedPreferences.getInt("HighScore", 0)
+
 
         HighscorView = findViewById(R.id.tvScore)
-        HighscorView.text = "High Score: $highScore"
-
+        loadData()
         editText=findViewById(R.id.etInputUser)
         button=findViewById(R.id.button)
         cLMain=findViewById(R.id.cLMain)
         recyclerView.adapter=RecyclerViewAdapter(this,message)
         recyclerView.layoutManager= LinearLayoutManager(this)
         textView=findViewById(R.id.textViewMain)
-        textView.setText("Phrase : $pharseStar")
+        textView.setText("Phrase : $phraseStar")
+
         button.setOnClickListener {
 
            if(guesses>0){
@@ -62,23 +60,15 @@ class MainActivity : AppCompatActivity() {
                 message.add("Game Over")
                customAlert("You lose...\nThe correct answer was $answer.\n\nPlay again?")
            }
-
         }
-
 
     }
 
     private fun updateScore(){
-        score = 10 - guesses
-        if(score >= highScore){
-            highScore = score
-            HighscorView.text = "High Score: $highScore"
-            with (sharedPreferences.edit()) {
-                putInt("HighScore", highScore)
-                apply()
-            }
-            Snackbar.make(cLMain, "NEW HIGH SCORE!", Snackbar.LENGTH_LONG).show()
-        }
+
+        if(guesses>highScore) highScore=guesses
+        Snackbar.make(cLMain, "NEW HIGH SCORE!", Snackbar.LENGTH_LONG).show()
+
     }
 
     fun addMessage(){
@@ -87,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(cLMain, "Please enter some text", Snackbar.LENGTH_LONG).show()
 
         }else{
-            if (guess ==answer || pharseStar==answer) {
+            if (guess ==answer || phraseStar==answer) {
                 customAlert("You win!\n\nPlay again?")
                 clearEditTextAndAddHint("Guess full phrase")
             }
@@ -115,9 +105,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerView.scrollToPosition(message.size - 1)
+        saveData()
 
     }
     private fun customAlert(title: String){
+        updateScore()
+        saveData()
         val dialogBuilder = AlertDialog.Builder(this)
         dialogBuilder.setMessage(title)
             .setPositiveButton("replay", DialogInterface.OnClickListener {
@@ -152,7 +145,7 @@ class MainActivity : AppCompatActivity() {
         for (i in answer.indices){
             if (answer[i]==litter.single()){
                 count++
-                pharseStar = pharseStar.substring(0, i) + litter + pharseStar.substring(i + 1)
+                phraseStar = phraseStar.substring(0, i) + litter + phraseStar.substring(i + 1)
 
                 found=true
             }
@@ -162,17 +155,34 @@ class MainActivity : AppCompatActivity() {
             message.add("No Found $litter")
         }
         else{
-            Guessed_Letter+="$litter "
+            guessed_Letter+="$litter "
 
         }
-        textView.setText("Phrase : $pharseStar \n Guessed Letter $Guessed_Letter ")
+        textView.setText("Phrase : $phraseStar \n Guessed Letter $guessed_Letter ")
         message.add("Found $count $litter(s)")
 
-        if (pharseStar==answer) {
+        if (phraseStar==answer) {
             customAlert("You win!\n\nPlay again?")
             clearEditTextAndAddHint("Guess full phrase")
 
         }
     }
+
+    fun saveData(){
+        val sharedPreferences = getSharedPreferences("preference_file_key",Context.MODE_PRIVATE)
+        val editor=sharedPreferences.edit()
+        editor.apply{
+            putInt("highScore",highScore)
+        }.apply()
+    }
+
+
+    fun loadData(){
+        val sharedPreferences = getSharedPreferences("preference_file_key",Context.MODE_PRIVATE)
+        highScore=sharedPreferences.getInt("highScore",0)
+        HighscorView.setText("High Score: $highScore")
+
+    }
+
 
 }
