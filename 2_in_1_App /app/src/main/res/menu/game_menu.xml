@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/meGGameNumber"
+        android:title="New Game" />
+    <item
+        android:id="@+id/meGGuess_the_phrase"
+        android:title="Guess the phrase" />
+    <item android:id="@+id/MainMenu"
+        android:title="Main menu" />
+</menu>
