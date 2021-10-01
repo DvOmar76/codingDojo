@@ -2,10 +2,8 @@ package com.example.recycler_view_app
 
 import android.content.Context
 import android.content.DialogInterface
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -22,16 +20,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var button: Button
     private lateinit var cLMain:ConstraintLayout
     lateinit var textView: TextView
+    private lateinit var highscorView: TextView
+
     var guesses=10
     var highScore=0
     var answer="omaro"
     var guessed_Letter=""
     var phraseStar=convertLiterToStar()
-    private var score=0
-    private lateinit var HighscorView: TextView
-
-    private lateinit var sharedPreferences: SharedPreferences
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -40,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        HighscorView = findViewById(R.id.tvScore)
+        highscorView = findViewById(R.id.tvScore)
         loadData()
         editText=findViewById(R.id.etInputUser)
         button=findViewById(R.id.button)
@@ -180,7 +175,7 @@ class MainActivity : AppCompatActivity() {
     fun loadData(){
         val sharedPreferences = getSharedPreferences("preference_file_key",Context.MODE_PRIVATE)
         highScore=sharedPreferences.getInt("highScore",0)
-        HighscorView.setText("High Score: $highScore")
+        highscorView.setText("High Score: $highScore")
 
     }
 
