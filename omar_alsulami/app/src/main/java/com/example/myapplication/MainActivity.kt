@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = RecyclerViewAdapter(messages)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-//----------------------(Start Button Withdraws )---------------------------------
+//----------------------(Start Button deposit )---------------------------------
         btnDeposit.setOnClickListener {
             deposit(edDeposit.text.toString().toInt())
 
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
             saveData()
         }
-//----------------------(end Button Withdraws )---------------------------------
+//----------------------(end Button deposit )---------------------------------
 
 //----------------------(Start Button Withdraws )---------------------------------
         btnWithdraws.setOnClickListener {
