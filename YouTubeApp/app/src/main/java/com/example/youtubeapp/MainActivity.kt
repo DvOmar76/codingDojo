@@ -32,8 +32,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         youTubePlayerView=findViewById(R.id.youtube_player_view)
+        checkInternet()
+
         youTubePlayerView.addYouTubePlayerListener(object: AbstractYouTubePlayerListener() {
-            checkInternet()
             override fun onReady(youTubePlayer: YouTubePlayer) {
                 super.onReady(youTubePlayer)
                 player=youTubePlayer
