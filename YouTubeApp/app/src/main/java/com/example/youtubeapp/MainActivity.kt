@@ -5,9 +5,12 @@ import android.content.res.Configuration
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Bundle
+import android.widget.GridView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.youtubeapp.adapter.RecyclerViewAdapter
+import com.example.youtubeapp.model.GridAdapter
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
@@ -47,9 +50,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeRV() {
-        recyclerView.adapter = RecyclerViewAdapter(videos,player )
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.setHasFixedSize(true)
+        val gridView: GridView =findViewById(R.id.GridView)
+        gridView.adapter = GridAdapter(videos,player,this@MainActivity )
     }
 
     //---------Override onConfigurationChanged to track device rotation------------------------------

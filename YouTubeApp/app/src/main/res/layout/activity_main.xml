@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,38 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/videoContaner"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:videoId="E-Kb6FgMbVw"
+        app:autoPlay="false"
+        app:showFullScreenButton="true" />
 
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/youtube_player_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:showSeekBar="true"
-            app:showYouTubeButton="false"
-            app:showVideoDuration="true"
-            app:showFullScreenButton="true"
-
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="7dp"
-    android:layout_margin="15dp">
-
-</androidx.recyclerview.widget.RecyclerView>
-        </LinearLayout>
-
-    </LinearLayout>
+    <GridView
+        android:id="@+id/GridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:numColumns="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/youtube_player_view"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_row" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

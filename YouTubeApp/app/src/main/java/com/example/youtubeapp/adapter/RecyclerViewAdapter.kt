@@ -1,11 +1,11 @@
-package com.example.youtubeapp
+package com.example.youtubeapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.youtubeapp.R
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 import kotlinx.android.synthetic.main.item_row.view.*
 
 
@@ -17,7 +17,7 @@ class RecyclerViewAdapter(private val videos:Array<Array<String>>, private val y
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RecyclerViewAdapter.RecyclerViewHolder {
+    ): RecyclerViewHolder {
         return RecyclerViewHolder(LayoutInflater.from(parent.context).inflate(
             R.layout.item_row,
             parent,
@@ -25,7 +25,7 @@ class RecyclerViewAdapter(private val videos:Array<Array<String>>, private val y
         ))
     }
 
-    override fun onBindViewHolder(holder: RecyclerViewAdapter.RecyclerViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
 
 
         holder.itemView.apply {
