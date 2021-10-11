@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity" >
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="view" />
 
     <Button
         android:id="@+id/button3"
@@ -19,6 +13,12 @@
         android:layout_height="wrap_content"
         android:onClick="addnew"
         android:text="Add new user" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update" />
 
     <ScrollView
         android:layout_width="match_parent"

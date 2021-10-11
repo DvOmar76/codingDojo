@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun updatePage(){
+        intent = Intent(applicationContext, Update::class.java)
+        startActivity(intent)
+    }
     fun addnew(view: android.view.View) {
         intent = Intent(applicationContext, newuser::class.java)
         startActivity(intent)
